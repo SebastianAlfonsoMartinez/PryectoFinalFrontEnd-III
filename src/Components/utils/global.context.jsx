@@ -4,11 +4,20 @@ export const initialState = {theme: "light", data: []}
 
 export const ContextGlobal = createContext(initialState);
 
+
+
 export const ContextProvider = ({ children }) => {
   //Aqui deberan implementar la logica propia del Context, utilizando el hook useMemo
 
   const [theme, setTheme] = useState(initialState.theme)
   const [data, setData] = useState(initialState.data)
+  
+  // const changeTheme = useMemo(() => {
+      
+  // })
+  
+
+
   const anotherData = useMemo(()=>{
     const getDentists = async() => {
       const dataFetched = await fetch('https://jsonplaceholder.typicode.com/users')
