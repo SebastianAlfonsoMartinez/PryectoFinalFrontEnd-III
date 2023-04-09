@@ -26,14 +26,15 @@ const Card = ({ name, username, id }) => {
     <div className={theme === "light" ? "card" : "card-dark"}>
       <Link to={`detail/${id}`}>
         {/* En cada card deberan mostrar en name - username y el id */}
-        <img src={doctor} alt={name} width='180px' />
+        <img src={doctor} alt={name} width='180px'  />
+        </Link>
         <h2>{name}</h2>
         <h3>User: {username}</h3>
         <h3>ID: {id}</h3>
         {/* No debes olvidar que la Card a su vez servira como Link hacia la pagina de detalle */}
 
         {/* Ademas deberan integrar la logica para guardar cada Card en el localStorage */}
-        </Link>
+        
         <button onClick={() => addFav(name, username, id)} className="favButton">Add fav</button>
     </div>
   );
